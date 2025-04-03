@@ -99,7 +99,8 @@ class _MyHomePageState extends State<MyHomePage> {
         
         child: Column(
           children: <Widget>[
-            Image.asset('assets/images/logo50.png'),
+
+            Image.asset('logo50.png'),
 
             Row(
               children: [
@@ -136,64 +137,66 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
            Row(
-          children: [
-            SizedBox(width: 90), // Espaciado para controlar el desplazamiento
-            Flexible( // Permite que la tabla se ajuste sin cambiar de tamaño
-              child: SizedBox(
-                width: 400, // Define un ancho fijo para evitar cambios de tamaño
-                child: Table(
-                  columnWidths: {
-                   // 0: FractionColumnWidth(0.75), // Ancho relativo de la primera columna
-                    0: FractionColumnWidth(0.27), 
-                    1: FractionColumnWidth(0.27),
-                    2: FractionColumnWidth(0.5),
-                  },
-                  children: [
-                    TableRow(
-                      children: [
-                        /*Container(
-                          alignment: Alignment.center,
-                        ),*/
-                        Container(
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.black),
+              children: [
+                Flexible(child: Table(
+                    //border: TableBorder.all(), // Establece el borde de la tabla
+                    
+                    columnWidths: {
+                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                      1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
+                      2: FractionColumnWidth(0.07),
+                      3: FractionColumnWidth(0.3),
+                    },
+                    children: [
+                      TableRow(
+                        children: [
+                          SizedBox(
+                            width: 500,
+                            /*child: TextField(
+                              decoration: const InputDecoration(
+                                fillColor: Colors.transparent,
+                              ),
+                            ),*/
                           ),
-                          child: Text(
-                            'SI',
-                            style: TextStyle(fontWeight: FontWeight.bold),
+                          Container(
+                            //padding: EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black)
+                            ),
+                            child: Text(
+                              'SI',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
                           ),
-                        ),
-                        Container(
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.black),
+                          Container(
+                            //padding: EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black)
+                            ),
+                            child: Text(
+                              'NO',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                              softWrap: true, // Permite que el texto se envuelva automáticamente
+                            ),
                           ),
-                          child: Text(
-                            'NO',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                            softWrap: true,
+                            Container(
+                            //padding: EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black)
+                            ),
+                            child: Text(
+                              'OBSERVACIONES',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                              softWrap: true, // Permite que el texto se envuelva automáticamente
+                            ),
                           ),
-                        ),
-                        Container(
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.black),
-                          ),
-                          child: Text(
-                            'OBSERVACIONES',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                            softWrap: true,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
+                        ],
+                      ), 
+                    ],
+                  ),
                 ),
-              ),
+              ],
             ),
-          ],
-        ),
 
 
             Row(
