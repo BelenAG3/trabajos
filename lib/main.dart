@@ -98,16 +98,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SingleChildScrollView(
         
         child: Column(
-         // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            //const Text('You have pushed the button this many times:'),
-           /* Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),*/
-//            const SizedBox(height: 20),
             Row(
-              //mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text('Fecha:'),
                 const SizedBox(width: 10),
@@ -141,60 +133,92 @@ class _MyHomePageState extends State<MyHomePage> {
                 )
               ],
             ),
-            Row(
+           Row(
+              mainAxisAlignment: MainAxisAlignment.center, // Mantiene la alineación original
               children: [
-                
-                  SizedBox(width: 400),
-                  Flexible(child: Table(
-                    border: TableBorder.all(), // Establece el borde de la tabla
-                    columnWidths: {
-                      0: FractionColumnWidth(0.095), // Ancho relativo de la primera columna
-                      1: FractionColumnWidth(0.095), // Ancho relativo de la segunda columna
-                      2: FractionColumnWidth(0.405),
-                    },
-                    children: [
-                      TableRow(
-                        children: [
-                          Flexible(child: Container(
-                            //padding: EdgeInsets.all(8),
-                            child: Text(
-                              'SI',
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                SizedBox(width: 100), // Espaciado para controlar el desplazamiento
+                Align(
+                  alignment: Alignment.centerRight, // Fija la tabla a la izquierda sin cambiar su tamaño
+                  child: SizedBox(
+                    width: 400, // Define un ancho fijo para evitar cambios de tamaño
+                    child: Table(
+                       // Establece el borde de la tabla
+                      columnWidths: {
+                        0: FractionColumnWidth(0.01), // Ancho relativo de la primera columna
+                        1: FractionColumnWidth(0.02), // Ancho relativo de la segunda columna
+                        2: FractionColumnWidth(0.1),
+                        3: FractionColumnWidth(0.1),
+                      },
+                      children: [
+                        TableRow(
+                          children: [
+                            Container(
+                              alignment: Alignment.center,
+                              
+                            ),
+                            Container(
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.black)
+                              ),
+                              child: Text(
+                                'SI',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              
+                            ),
+                            Container(
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.black)
+                              ),
+                              child: Text(
+                                'NO',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                                softWrap: true, // Permite que el texto se envuelva automáticamente
                               ),
                             ),
-                          ),
-                          Flexible(child: Container(
-                            //padding: EdgeInsets.all(8),
-                            child: Text(
-                              'NO',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                              softWrap: true, // Permite que el texto se envuelva automáticamente
+                            Container(
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.black)
+                              ),
+                              child: Text(
+                                'OBSERVACIONES',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                                softWrap: true, // Permite que el texto se envuelva automáticamente
                               ),
                             ),
-                          ),  
-                          Flexible(child:  Container(
-                            //padding: EdgeInsets.all(8),
-                            child: Text(
-                              'OBSERVACIONES',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                              softWrap: true, // Permite que el texto se envuelva automáticamente
-                             ),
-                            ),
-                          ),
-                           
-                        ],
-                      ), 
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
             ),
+
             Row(
               children: [
-                 Text(
-                  'RECEPCIÓN',
-                  style: TextStyle(fontWeight: FontWeight.bold)
-                  ),
+                Flexible(child: Table(
+                  columnWidths:{
+                    0: FractionColumnWidth(0.3)
+                    },
+                    children: [
+                      TableRow(
+                        children: [
+                          Container(
+                            child: Text(
+                              'RECEPCIÓN',
+                              style: TextStyle(fontWeight: FontWeight.bold)
+                            ),
+                          )
+                        ]
+                      )
+                    ],
+                  )
+                ),
+                 
               ],
             ),
              Row(
