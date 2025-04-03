@@ -96,6 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: SingleChildScrollView(
+        
         child: Column(
          // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -124,20 +125,21 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const SizedBox(height: 20),
             Row(
-              //mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text('Obra:'),
                 const SizedBox(width: 20),
-                SizedBox(
-                  width: 500,
-                  child: TextField(
-                    controller: _dateController1,
-                    decoration: const InputDecoration(
-                      labelText: 'Escribe la obra',
-                      border: OutlineInputBorder(),
+                Expanded(child: SizedBox(
+                    width: 500,
+                    child: TextField(
+                      controller: _dateController1,
+                      decoration: const InputDecoration(
+                        labelText: 'Escribe la obra',
+                        border: OutlineInputBorder(),
+                      ),
                     ),
-                  ),
-                ),
+                  )
+                )
+                
               ],
             ),
             Row(
