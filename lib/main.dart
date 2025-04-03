@@ -128,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 const Text('Obra:'),
                 const SizedBox(width: 20),
-                Expanded(child: SizedBox(
+                Flexible(child: SizedBox(
                     width: 500,
                     child: TextField(
                       controller: _dateController1,
@@ -139,7 +139,54 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   )
                 )
+              ],
+            ),
+            Row(
+              children: [
                 
+                  SizedBox(width: 400),
+                  Flexible(child: Table(
+                    border: TableBorder.all(), // Establece el borde de la tabla
+                    columnWidths: {
+                      0: FractionColumnWidth(0.095), // Ancho relativo de la primera columna
+                      1: FractionColumnWidth(0.095), // Ancho relativo de la segunda columna
+                      2: FractionColumnWidth(0.405),
+                    },
+                    children: [
+                      TableRow(
+                        children: [
+                          Flexible(child: Container(
+                            //padding: EdgeInsets.all(8),
+                            child: Text(
+                              'SI',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                          Flexible(child: Container(
+                            //padding: EdgeInsets.all(8),
+                            child: Text(
+                              'NO',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                              softWrap: true, // Permite que el texto se envuelva automáticamente
+                              ),
+                            ),
+                          ),  
+                          Flexible(child:  Container(
+                            //padding: EdgeInsets.all(8),
+                            child: Text(
+                              'OBSERVACIONES',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                              softWrap: true, // Permite que el texto se envuelva automáticamente
+                             ),
+                            ),
+                          ),
+                           
+                        ],
+                      ), 
+                    ],
+                  ),
+                ),
               ],
             ),
             Row(
@@ -148,45 +195,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   'RECEPCIÓN',
                   style: TextStyle(fontWeight: FontWeight.bold)
                   ),
-                  SizedBox(width: 161),
-                  Flexible(child: Table(
-                    border: TableBorder.all(), // Establece el borde de la tabla
-                    columnWidths: {
-                      0: FractionColumnWidth(0.0911), // Ancho relativo de la primera columna
-                      1: FractionColumnWidth(0.0911), // Ancho relativo de la segunda columna
-                      2: FractionColumnWidth(0.39),
-                    },
-                    children: [
-                      TableRow(
-                        children: [
-                          Container(
-                            //padding: EdgeInsets.all(8),
-                            child: Text(
-                              'SI',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                          Container(
-                            //padding: EdgeInsets.all(8),
-                            child: Text(
-                              'NO',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                              softWrap: true, // Permite que el texto se envuelva automáticamente
-                            ),
-                          ),
-                            Container(
-                            //padding: EdgeInsets.all(8),
-                            child: Text(
-                              'OBSERVACIONES',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                              softWrap: true, // Permite que el texto se envuelva automáticamente
-                            ),
-                          ),
-                        ],
-                      ), 
-                    ],
-                  ),
-                ),
               ],
             ),
              Row(
@@ -194,7 +202,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Flexible(child: Table(
                     border: TableBorder.all(), // Establece el borde de la tabla
                     columnWidths: {
-                      0: FractionColumnWidth(0.23), // Ancho relativo de la primera columna
+                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
                       1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
                       2: FractionColumnWidth(0.07),
                       3: FractionColumnWidth(0.3),
@@ -246,7 +254,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               children: [
                  Text(
-                  'RECEPCIÓN',
+                  'REPARTO',
                   style: TextStyle(fontWeight: FontWeight.bold)
                   ),
               ],
