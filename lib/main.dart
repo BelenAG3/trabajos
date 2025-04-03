@@ -66,6 +66,12 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _dateController29 = TextEditingController();
   final TextEditingController _dateController30 = TextEditingController();
   final TextEditingController _dateController31 = TextEditingController();
+  final TextEditingController _dateController32 = TextEditingController();
+  final TextEditingController _dateController33 = TextEditingController();
+  final TextEditingController _dateController34 = TextEditingController();
+  final TextEditingController _dateController35 = TextEditingController();
+  final TextEditingController _dateController36 = TextEditingController();
+  final TextEditingController _dateController37 = TextEditingController();
 
 
   /*void _incrementCounter() {
@@ -89,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
           style: const TextStyle(fontWeight: FontWeight.bold), // Negrita
         ),
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
          // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -728,66 +734,166 @@ class _MyHomePageState extends State<MyHomePage> {
                 )
               ]
              ),
-             SingleChildScrollView(
-              scrollDirection: Axis.vertical, // Desplazamiento vertical
-                child: Column(
-                  children: [
-                        SingleChildScrollView(
-                          scrollDirection: Axis.horizontal, // Desplazamiento horizontal
-                          child: Table(
-                          border: TableBorder.all(), // Establece el borde de la tabla
-                          columnWidths: {
-                            0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
-                            1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
-                            2: FractionColumnWidth(0.07),
-                            3: FractionColumnWidth(0.3),
-                          },
+             Row(
+              children: [
+                Flexible(child: Table(
+                    border: TableBorder.all(), // Establece el borde de la tabla
+                    columnWidths: {
+                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                      1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
+                      2: FractionColumnWidth(0.07),
+                      3: FractionColumnWidth(0.3),
+                    },
+                    children: [
+                      TableRow(
                         children: [
-                          TableRow(
-                            children: [
-                                    Container(
-                                      //padding: EdgeInsets.all(8),
-                                      child: Text(
-                                        'Montaje de Rodapies',
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      width: 500,
-                                      child: TextField(
-                                        controller: _dateController29,
-                                        decoration: const InputDecoration(
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      width: 500,
-                                      child: TextField(
-                                        controller: _dateController30,
-                                        decoration: const InputDecoration(
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      width: 500,
-                                      child: TextField(
-                                        controller: _dateController31,
-                                        decoration: const InputDecoration(
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ), 
-                              ],
+                          Container(
+                             //padding: EdgeInsets.all(8),
+                            child: Text(
+                              'Montaje de Carpintería Especifica',
                             ),
-                          ) 
-                        
+                          ),
+                            SizedBox(
+                              width: 500,
+                              child: TextField(
+                                controller: _dateController32,
+                                decoration: const InputDecoration(
+                                  border: OutlineInputBorder(),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 500,
+                              child: TextField(
+                                controller: _dateController33,
+                                decoration: const InputDecoration(
+                                  border: OutlineInputBorder(),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 500,
+                              child: TextField(
+                                controller: _dateController34,
+                                decoration: const InputDecoration(
+                                  border: OutlineInputBorder(),
+                                ),
+                              ),
+                            ),
+                        ],
+                      ), 
                     ],
-                ),
+                  ),
+                )
+              ]
              ),
-             
+             Row(
+              children: [
+                Flexible(child: Table(
+                    border: TableBorder.all(), // Establece el borde de la tabla
+                    columnWidths: {
+                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                      1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
+                      2: FractionColumnWidth(0.07),
+                      3: FractionColumnWidth(0.3),
+                    },
+                    children: [
+                      TableRow(
+                        children: [
+                          Container(
+                             //padding: EdgeInsets.all(8),
+                            child: Text(
+                              'Revisión de elementos complementarios (barras ...)',
+                            ),
+                          ),
+                            SizedBox(
+                              width: 500,
+                              child: TextField(
+                                controller: _dateController35,
+                                decoration: const InputDecoration(
+                                  border: OutlineInputBorder(),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 500,
+                              child: TextField(
+                                controller: _dateController36,
+                                decoration: const InputDecoration(
+                                  border: OutlineInputBorder(),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 500,
+                              child: TextField(
+                                controller: _dateController37,
+                                decoration: const InputDecoration(
+                                  border: OutlineInputBorder(),
+                                ),
+                              ),
+                            ),
+                        ],
+                      ), 
+                    ],
+                  ),
+                )
+              ]
+             ),
+             Row(
+              children: [
+                Flexible(child: Table(
+                    border: TableBorder.all(), // Establece el borde de la tabla
+                    columnWidths: {
+                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                      1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
+                      2: FractionColumnWidth(0.07),
+                      3: FractionColumnWidth(0.3),
+                    },
+                    children: [
+                      TableRow(
+                        children: [
+                          Container(
+                             //padding: EdgeInsets.all(8),
+                            child: Text(
+                              'Repasos piezas de carpintería (emplastecido ...)',
+                            ),
+                          ),
+                            SizedBox(
+                              width: 500,
+                              child: TextField(
+                                controller: _dateController35,
+                                decoration: const InputDecoration(
+                                  border: OutlineInputBorder(),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 500,
+                              child: TextField(
+                                controller: _dateController36,
+                                decoration: const InputDecoration(
+                                  border: OutlineInputBorder(),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 500,
+                              child: TextField(
+                                controller: _dateController37,
+                                decoration: const InputDecoration(
+                                  border: OutlineInputBorder(),
+                                ),
+                              ),
+                            ),
+                        ],
+                      ), 
+                    ],
+                  ),
+                )
+              ]
+             ),
+
           ],
         ),
       ),
