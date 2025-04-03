@@ -134,69 +134,65 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
            Row(
-              mainAxisAlignment: MainAxisAlignment.center, // Mantiene la alineación original
-              children: [
-                SizedBox(width: 100), // Espaciado para controlar el desplazamiento
-                Align(
-                  alignment: Alignment.centerRight, // Fija la tabla a la izquierda sin cambiar su tamaño
-                  child: SizedBox(
-                    width: 400, // Define un ancho fijo para evitar cambios de tamaño
-                    child: Table(
-                       // Establece el borde de la tabla
-                      columnWidths: {
-                        0: FractionColumnWidth(0.01), // Ancho relativo de la primera columna
-                        1: FractionColumnWidth(0.02), // Ancho relativo de la segunda columna
-                        2: FractionColumnWidth(0.1),
-                        3: FractionColumnWidth(0.1),
-                      },
+          children: [
+            SizedBox(width: 90), // Espaciado para controlar el desplazamiento
+            Flexible( // Permite que la tabla se ajuste sin cambiar de tamaño
+              child: SizedBox(
+                width: 400, // Define un ancho fijo para evitar cambios de tamaño
+                child: Table(
+                  columnWidths: {
+                   // 0: FractionColumnWidth(0.75), // Ancho relativo de la primera columna
+                    0: FractionColumnWidth(0.27), 
+                    1: FractionColumnWidth(0.27),
+                    2: FractionColumnWidth(0.5),
+                  },
+                  children: [
+                    TableRow(
                       children: [
-                        TableRow(
-                          children: [
-                            Container(
-                              alignment: Alignment.center,
-                              
-                            ),
-                            Container(
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                border: Border.all(color: Colors.black)
-                              ),
-                              child: Text(
-                                'SI',
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                              
-                            ),
-                            Container(
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                border: Border.all(color: Colors.black)
-                              ),
-                              child: Text(
-                                'NO',
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                                softWrap: true, // Permite que el texto se envuelva automáticamente
-                              ),
-                            ),
-                            Container(
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                border: Border.all(color: Colors.black)
-                              ),
-                              child: Text(
-                                'OBSERVACIONES',
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                                softWrap: true, // Permite que el texto se envuelva automáticamente
-                              ),
-                            ),
-                          ],
+                        /*Container(
+                          alignment: Alignment.center,
+                        ),*/
+                        Container(
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black),
+                          ),
+                          child: Text(
+                            'SI',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Container(
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black),
+                          ),
+                          child: Text(
+                            'NO',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                            softWrap: true,
+                          ),
+                        ),
+                        Container(
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black),
+                          ),
+                          child: Text(
+                            'OBSERVACIONES',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                            softWrap: true,
+                          ),
                         ),
                       ],
                     ),
-                  ),
+                  ],
                 ),
-              ],
+              ),
             ),
+          ],
+        ),
+
 
             Row(
               children: [
