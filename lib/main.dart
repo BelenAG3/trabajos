@@ -99,6 +99,8 @@ class _MyHomePageState extends State<MyHomePage> {
         
         child: Column(
           children: <Widget>[
+            Image.asset('assets/images/logo50.png'),
+
             Row(
               children: [
                 const Text('Fecha:'),
