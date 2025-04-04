@@ -211,7 +211,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           Container(
                             decoration: BoxDecoration(
-                              color: Colors.white, // Fondo blanco para las celdas individuales
+                              //color: Colors.white, // Fondo blanco para las celdas individuales
                               border: Border.all(color: Colors.black),
                             ),
                             child: Text(
@@ -221,7 +221,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           Container(
                             decoration: BoxDecoration(
-                              color: Colors.white,
+                             // color: Colors.white,
                               border: Border.all(color: Colors.black),
                             ),
                             child: Text(
@@ -232,7 +232,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           Container(
                             decoration: BoxDecoration(
-                              color: Colors.white,
+                              //color: Colors.white,
                               border: Border.all(color: Colors.black),
                             ),
                             child: Text(
@@ -415,23 +415,28 @@ class _MyHomePageState extends State<MyHomePage> {
 
              Row(
               children: [
-                Flexible(child: Table(
-                    border: TableBorder.all(), // Establece el borde de la tabla
-                    columnWidths: {
-                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
-                      1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
-                      2: FractionColumnWidth(0.07),
-                      3: FractionColumnWidth(0.3),
-                    },
-                    children: [
-                      TableRow(
-                        children: [
-                          Container(
-                             //padding: EdgeInsets.all(8),
-                            child: Text(
-                              'Montaje de Huecos de Entrada',
+                Flexible(
+                  child: Container(
+                    color: Colors.grey[300], // Fondo gris
+                    padding: EdgeInsets.all(8), // Opcional: agregar algo de padding
+                    child: Table(
+                      border: TableBorder.all(), // Establece el borde de la tabla
+                      columnWidths: {
+                        0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                        1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
+                        2: FractionColumnWidth(0.07),
+                        3: FractionColumnWidth(0.6),
+                      },
+                      children: [
+                        TableRow(
+                          children: [
+                            Container(
+                              color: Colors.grey[300], // Fondo gris
+                              padding: EdgeInsets.all(8), // Espaciado opcional
+                              child: Text(
+                                'Montaje de Huecos de Entrada',
+                              ),
                             ),
-                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -459,32 +464,39 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                               ),
                             ),
-                        ],
-                      ), 
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                )
-              ]
-             ),
+                ),
+              ],
+            ),
+
              Row(
               children: [
-                Flexible(child: Table(
-                    border: TableBorder.all(), // Establece el borde de la tabla
-                    columnWidths: {
-                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
-                      1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
-                      2: FractionColumnWidth(0.07),
-                      3: FractionColumnWidth(0.3),
-                    },
-                    children: [
-                      TableRow(
-                        children: [
-                          Container(
-                             //padding: EdgeInsets.all(8),
-                            child: Text(
-                              'Ajuste de Holguras Huecos de Entrada',
+                Flexible(
+                  child: Container(
+                    color: Colors.grey[300], // Fondo gris
+                    padding: EdgeInsets.all(8), // Opcional: agregar algo de padding
+                    child: Table(
+                      border: TableBorder.all(), // Establece el borde de la tabla
+                      columnWidths: {
+                        0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                        1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
+                        2: FractionColumnWidth(0.07),
+                        3: FractionColumnWidth(0.6),
+                      },
+                      children: [
+                        TableRow(
+                          children: [
+                            Container(
+                              color: Colors.grey[300], // Fondo gris
+                              padding: EdgeInsets.all(8), // Espaciado opcional
+                              child: Text(
+                                'Ajuste de Holguras Huecos de Entrada',
+                              ),
                             ),
-                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -512,32 +524,39 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                               ),
                             ),
-                        ],
-                      ), 
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                )
-              ]
-             ),
+                ),
+              ],
+            ),
+
              Row(
               children: [
-                Flexible(child: Table(
-                    border: TableBorder.all(), // Establece el borde de la tabla
-                    columnWidths: {
-                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
-                      1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
-                      2: FractionColumnWidth(0.07),
-                      3: FractionColumnWidth(0.3),
-                    },
-                    children: [
-                      TableRow(
-                        children: [
-                          Container(
-                             //padding: EdgeInsets.all(8),
-                            child: Text(
-                              'Montaje de Huecos de Paso',
+                Flexible(
+                  child: Container(
+                    color: Colors.grey[300], // Fondo gris
+                    padding: EdgeInsets.all(8), // Opcional: agregar algo de padding
+                    child: Table(
+                      border: TableBorder.all(), // Establece el borde de la tabla
+                      columnWidths: {
+                        0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                        1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
+                        2: FractionColumnWidth(0.07),
+                        3: FractionColumnWidth(0.6),
+                      },
+                      children: [
+                        TableRow(
+                          children: [
+                            Container(
+                              color: Colors.grey[300], // Fondo gris
+                              padding: EdgeInsets.all(8), // Espaciado opcional
+                              child: Text(
+                                'Montaje de Huecos de Paso',
+                              ),
                             ),
-                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -565,32 +584,39 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                               ),
                             ),
-                        ],
-                      ), 
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                )
-              ]
-             ),
+                ),
+              ],
+            ),
+
              Row(
               children: [
-                Flexible(child: Table(
-                    border: TableBorder.all(), // Establece el borde de la tabla
-                    columnWidths: {
-                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
-                      1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
-                      2: FractionColumnWidth(0.07),
-                      3: FractionColumnWidth(0.3),
-                    },
-                    children: [
-                      TableRow(
-                        children: [
-                          Container(
-                             //padding: EdgeInsets.all(8),
-                            child: Text(
-                              'Ajuste Holguras Huecos de Paso',
+                Flexible(
+                  child: Container(
+                    color: Colors.grey[300], // Fondo gris
+                    padding: EdgeInsets.all(8), // Opcional: agregar algo de padding
+                    child: Table(
+                      border: TableBorder.all(), // Establece el borde de la tabla
+                      columnWidths: {
+                        0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                        1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
+                        2: FractionColumnWidth(0.07),
+                        3: FractionColumnWidth(0.6),
+                      },
+                      children: [
+                        TableRow(
+                          children: [
+                            Container(
+                              color: Colors.grey[300], // Fondo gris
+                              padding: EdgeInsets.all(8), // Espaciado opcional
+                              child: Text(
+                                'Ajuste Holguras Huecos de Paso',
+                              ),
                             ),
-                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -618,32 +644,39 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                               ),
                             ),
-                        ],
-                      ), 
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                )
-              ]
-             ),
+                ),
+              ],
+            ),
+
              Row(
               children: [
-                Flexible(child: Table(
-                    border: TableBorder.all(), // Establece el borde de la tabla
-                    columnWidths: {
-                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
-                      1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
-                      2: FractionColumnWidth(0.07),
-                      3: FractionColumnWidth(0.3),
-                    },
-                    children: [
-                      TableRow(
-                        children: [
-                          Container(
-                             //padding: EdgeInsets.all(8),
-                            child: Text(
-                              'Montaje de Modulo de Armarios',
+                Flexible(
+                  child: Container(
+                    color: Colors.grey[300], // Fondo gris
+                    padding: EdgeInsets.all(8), // Opcional: agregar algo de padding
+                    child: Table(
+                      border: TableBorder.all(), // Establece el borde de la tabla
+                      columnWidths: {
+                        0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                        1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
+                        2: FractionColumnWidth(0.07),
+                        3: FractionColumnWidth(0.6),
+                      },
+                      children: [
+                        TableRow(
+                          children: [
+                            Container(
+                              color: Colors.grey[300], // Fondo gris
+                              padding: EdgeInsets.all(8), // Espaciado opcional
+                              child: Text(
+                                'Montaje de Modulo de Armarios',
+                              ),
                             ),
-                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -671,32 +704,39 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                               ),
                             ),
-                        ],
-                      ), 
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                )
-              ]
-             ),
+                ),
+              ],
+            ),
+
              Row(
               children: [
-                Flexible(child: Table(
-                    border: TableBorder.all(), // Establece el borde de la tabla
-                    columnWidths: {
-                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
-                      1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
-                      2: FractionColumnWidth(0.07),
-                      3: FractionColumnWidth(0.3),
-                    },
-                    children: [
-                      TableRow(
-                        children: [
-                          Container(
-                             //padding: EdgeInsets.all(8),
-                            child: Text(
-                              'Ajuste Holguras Huecos de Armarios',
+                Flexible(
+                  child: Container(
+                    color: Colors.grey[300], // Fondo gris
+                    padding: EdgeInsets.all(8), // Opcional: agregar algo de padding
+                    child: Table(
+                      border: TableBorder.all(), // Establece el borde de la tabla
+                      columnWidths: {
+                        0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                        1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
+                        2: FractionColumnWidth(0.07),
+                        3: FractionColumnWidth(0.6),
+                      },
+                      children: [
+                        TableRow(
+                          children: [
+                            Container(
+                              color: Colors.grey[300], // Fondo gris
+                              padding: EdgeInsets.all(8), // Espaciado opcional
+                              child: Text(
+                                'Ajuste Holguras Huecos de Armarios',
+                              ),
                             ),
-                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -724,32 +764,39 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                               ),
                             ),
-                        ],
-                      ), 
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                )
-              ]
-             ),
+                ),
+              ],
+            ),
+
              Row(
               children: [
-                Flexible(child: Table(
-                    border: TableBorder.all(), // Establece el borde de la tabla
-                    columnWidths: {
-                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
-                      1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
-                      2: FractionColumnWidth(0.07),
-                      3: FractionColumnWidth(0.3),
-                    },
-                    children: [
-                      TableRow(
-                        children: [
-                          Container(
-                             //padding: EdgeInsets.all(8),
-                            child: Text(
-                              'Montaje de Tapajuntas',
+                Flexible(
+                  child: Container(
+                    color: Colors.grey[300], // Fondo gris
+                    padding: EdgeInsets.all(8), // Opcional: agregar algo de padding
+                    child: Table(
+                      border: TableBorder.all(), // Establece el borde de la tabla
+                      columnWidths: {
+                        0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                        1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
+                        2: FractionColumnWidth(0.07),
+                        3: FractionColumnWidth(0.6),
+                      },
+                      children: [
+                        TableRow(
+                          children: [
+                            Container(
+                              color: Colors.grey[300], // Fondo gris
+                              padding: EdgeInsets.all(8), // Espaciado opcional
+                              child: Text(
+                                'Montaje de Tapajuntas',
+                              ),
                             ),
-                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -777,32 +824,39 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                               ),
                             ),
-                        ],
-                      ), 
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                )
-              ]
-             ),
+                ),
+              ],
+            ),
+
              Row(
               children: [
-                Flexible(child: Table(
-                    border: TableBorder.all(), // Establece el borde de la tabla
-                    columnWidths: {
-                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
-                      1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
-                      2: FractionColumnWidth(0.07),
-                      3: FractionColumnWidth(0.3),
-                    },
-                    children: [
-                      TableRow(
-                        children: [
-                          Container(
-                             //padding: EdgeInsets.all(8),
-                            child: Text(
-                              'Montaje de Rodapies',
+                Flexible(
+                  child: Container(
+                    color: Colors.grey[300], // Fondo gris
+                    padding: EdgeInsets.all(8), // Opcional: agregar algo de padding
+                    child: Table(
+                      border: TableBorder.all(), // Establece el borde de la tabla
+                      columnWidths: {
+                        0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                        1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
+                        2: FractionColumnWidth(0.07),
+                        3: FractionColumnWidth(0.6),
+                      },
+                      children: [
+                        TableRow(
+                          children: [
+                            Container(
+                              color: Colors.grey[300], // Fondo gris
+                              padding: EdgeInsets.all(8), // Espaciado opcional
+                              child: Text(
+                                'Montaje de Rodapies',
+                              ),
                             ),
-                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -830,32 +884,39 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                               ),
                             ),
-                        ],
-                      ), 
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                )
-              ]
-             ),
-             Row(
+                ),
+              ],
+            ),
+
+            Row(
               children: [
-                Flexible(child: Table(
-                    border: TableBorder.all(), // Establece el borde de la tabla
-                    columnWidths: {
-                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
-                      1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
-                      2: FractionColumnWidth(0.07),
-                      3: FractionColumnWidth(0.3),
-                    },
-                    children: [
-                      TableRow(
-                        children: [
-                          Container(
-                             //padding: EdgeInsets.all(8),
-                            child: Text(
-                              'Montaje de Carpintería Especifica',
+                Flexible(
+                  child: Container(
+                    color: Colors.grey[300], // Fondo gris
+                    padding: EdgeInsets.all(8), // Opcional: agregar algo de padding
+                    child: Table(
+                      border: TableBorder.all(), // Establece el borde de la tabla
+                      columnWidths: {
+                        0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                        1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
+                        2: FractionColumnWidth(0.07),
+                        3: FractionColumnWidth(0.6),
+                      },
+                      children: [
+                        TableRow(
+                          children: [
+                            Container(
+                              color: Colors.grey[300], // Fondo gris
+                              padding: EdgeInsets.all(8), // Espaciado opcional
+                              child: Text(
+                                'Montaje de Carpintería Especifica',
+                              ),
                             ),
-                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -883,32 +944,39 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                               ),
                             ),
-                        ],
-                      ), 
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                )
-              ]
-             ),
+                ),
+              ],
+            ),
+
              Row(
               children: [
-                Flexible(child: Table(
-                    border: TableBorder.all(), // Establece el borde de la tabla
-                    columnWidths: {
-                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
-                      1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
-                      2: FractionColumnWidth(0.07),
-                      3: FractionColumnWidth(0.3),
-                    },
-                    children: [
-                      TableRow(
-                        children: [
-                          Container(
-                             //padding: EdgeInsets.all(8),
-                            child: Text(
-                              'Revisión de elementos complementarios (barras ...)',
+                Flexible(
+                  child: Container(
+                    color: Colors.grey[300], // Fondo gris
+                    padding: EdgeInsets.all(8), // Opcional: agregar algo de padding
+                    child: Table(
+                      border: TableBorder.all(), // Establece el borde de la tabla
+                      columnWidths: {
+                        0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                        1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
+                        2: FractionColumnWidth(0.07),
+                        3: FractionColumnWidth(0.6),
+                      },
+                      children: [
+                        TableRow(
+                          children: [
+                            Container(
+                              color: Colors.grey[300], // Fondo gris
+                              padding: EdgeInsets.all(8), // Espaciado opcional
+                              child: Text(
+                                'Revisión de elementos complementarios (barras ...)',
+                              ),
                             ),
-                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -936,32 +1004,39 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                               ),
                             ),
-                        ],
-                      ), 
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                )
-              ]
-             ),
+                ),
+              ],
+            ),
+
              Row(
               children: [
-                Flexible(child: Table(
-                    border: TableBorder.all(), // Establece el borde de la tabla
-                    columnWidths: {
-                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
-                      1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
-                      2: FractionColumnWidth(0.07),
-                      3: FractionColumnWidth(0.3),
-                    },
-                    children: [
-                      TableRow(
-                        children: [
-                          Container(
-                             //padding: EdgeInsets.all(8),
-                            child: Text(
-                              'Repasos piezas de carpintería (emplastecido ...)',
+                Flexible(
+                  child: Container(
+                    color: Colors.grey[300], // Fondo gris
+                    padding: EdgeInsets.all(8), // Opcional: agregar algo de padding
+                    child: Table(
+                      border: TableBorder.all(), // Establece el borde de la tabla
+                      columnWidths: {
+                        0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                        1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
+                        2: FractionColumnWidth(0.07),
+                        3: FractionColumnWidth(0.6),
+                      },
+                      children: [
+                        TableRow(
+                          children: [
+                            Container(
+                              color: Colors.grey[300], // Fondo gris en la primera columna
+                              padding: EdgeInsets.all(8), // Espaciado opcional
+                              child: Text(
+                                'Repasos piezas de carpintería (emplastecido ...)',
+                              ),
                             ),
-                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -989,18 +1064,18 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                               ),
                             ),
-                        ],
-                      ), 
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                )
-              ]
-             ),
-          ],
-        ),
+                ),
+              ],
+            ),
+        
+          ]
+        ),   
       ),
-      
-      
       /*floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
