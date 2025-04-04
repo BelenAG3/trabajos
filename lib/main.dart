@@ -34,6 +34,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+   Color _color = Color.fromARGB(155, 204, 204, 204);
 //  int _counter = 0;
   final TextEditingController _dateController = TextEditingController();
   final TextEditingController _dateController1 = TextEditingController();
@@ -90,6 +91,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     
     return Scaffold(
+      backgroundColor: _color,
+
       appBar: AppBar(
         
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -346,7 +349,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Container(
                   color: Colors.grey[300], // Fondo gris
-                  width: 1534,
+                  //width: 1530,
                   padding: EdgeInsets.all(8), // Espaciado opcional
                   child: Text(
                     'REPARTO',
