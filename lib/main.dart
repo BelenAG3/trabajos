@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
+      ), 
       home: const MyHomePage(title: 'CHECK-LIST TRABAJOS DE MONTAJE'),
     );
   }
@@ -95,6 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
           style: const TextStyle(fontWeight: FontWeight.bold), // Negrita
         ),
       ),
+      
       body: SingleChildScrollView(
         
         child: Column(
@@ -106,38 +107,36 @@ class _MyHomePageState extends State<MyHomePage> {
                 columnWidths: {
                   0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
                   1: FractionColumnWidth(0.25), // Ancho relativo de la segunda columna
-                  2: FractionColumnWidth(0.25), // Ancho relativo de la segunda columna
+                  2: FractionColumnWidth(0.5), // Ancho relativo de la segunda columna
                 },
                 children: [
                   TableRow(
                     children: [
                       Container(
                             //padding: EdgeInsets.all(8),
-                            
+                            color: Colors.grey[300],
                             child: Image.asset('logo50.png', width: 200, height: 200,),
                             ),
                             Container(
+                              color: Colors.grey[300],
                             child: Text(
                               'GUILLÉN',
-                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 90),
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 90, height: 2.22),
                               softWrap: true, // Permite que el texto se envuelva automáticamente
                             ),
                           ),
                           Container(
+                            color: Colors.grey[300],
                             child: Text(
                               'INDUSTRIAS DE LA MADERA S.L.',
-                              style: TextStyle( fontSize: 40),
+                              style: TextStyle( fontSize: 40, height: 5),
                               softWrap: true, // Permite que el texto se envuelva automáticamente
                             ),
                           ),
                     ]
                   )
                 ],
-                  
               )
-              
-             
-               
             ),
             ],
            ),
@@ -970,7 +969,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 )
               ]
              ),
-
           ],
         ),
       ),
