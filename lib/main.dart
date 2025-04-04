@@ -73,6 +73,9 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _dateController35 = TextEditingController();
   final TextEditingController _dateController36 = TextEditingController();
   final TextEditingController _dateController37 = TextEditingController();
+  final TextEditingController _dateController38 = TextEditingController();
+  final TextEditingController _dateController39 = TextEditingController();
+  final TextEditingController _dateController40 = TextEditingController();
 
 
   /*void _incrementCounter() {
@@ -380,7 +383,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController2,
+                                controller: _dateController7,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
@@ -389,7 +392,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController3,
+                                controller: _dateController6,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
@@ -398,7 +401,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController4,
+                                controller: _dateController5,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
@@ -1040,7 +1043,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController35,
+                                controller: _dateController38,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
@@ -1049,7 +1052,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController36,
+                                controller: _dateController39,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
@@ -1058,7 +1061,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController37,
+                                controller: _dateController40,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
