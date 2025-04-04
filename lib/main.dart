@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
+        colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF800000)),
+        useMaterial3: true,
       ), 
       home: const MyHomePage(title: 'CHECK-LIST TRABAJOS DE MONTAJE'),
     );
@@ -143,66 +144,75 @@ class _MyHomePageState extends State<MyHomePage> {
             
             
 
-            Row(
-              children: [
-                const Text('Fecha:'),
-                const SizedBox(width: 10),
-                SizedBox(
-                  width: 200,
-                  child: TextField(
-                    controller: _dateController,
-                    decoration: const InputDecoration(
-                      labelText: 'Ingrese una fecha',
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 20),
-            Row(
-              children: [
-                const Text('Obra:'),
-                const SizedBox(width: 20),
-                Flexible(child: SizedBox(
-                    width: 500,
+           Container(
+              color: Colors.grey[300], // Cambia el tono si quieres (ej. grey[100], grey[300])
+              padding: EdgeInsets.all(8), // Opcional: para que no esté pegado al borde
+              child: Row(
+                children: [
+                  const Text('Fecha:'),
+                  const SizedBox(width: 10),
+                  SizedBox(
+                    width: 200,
                     child: TextField(
-                      controller: _dateController1,
+                      controller: _dateController,
                       decoration: const InputDecoration(
-                        labelText: 'Escribe la obra',
+                        labelText: 'Ingrese una fecha',
                         border: OutlineInputBorder(),
                       ),
                     ),
-                  )
-                )
-              ],
+                  ),
+                ],
+              ),
             ),
+           // const SizedBox(height: 20),
+            Container(
+              color: Colors.grey[300], // Fondo gris claro
+              padding: EdgeInsets.all(8), // Espaciado interno para que no se vea pegado
+              child: Row(
+                children: [
+                  const Text('Obra:'),
+                  const SizedBox(width: 20),
+                  Flexible(
+                    child: SizedBox(
+                      width: 500,
+                      child: TextField(
+                        controller: _dateController1,
+                        decoration: const InputDecoration(
+                          labelText: 'Escribe la obra',
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
            Row(
-              children: [
-                Flexible(child: Table(
+            children: [
+              Flexible(
+                child: Container(
+                  color: Colors.grey[300], // Fondo gris claro
+                  padding: EdgeInsets.all(8), // Espaciado interno opcional
+                  child: Table(
                     //border: TableBorder.all(), // Establece el borde de la tabla
-                    
                     columnWidths: {
-                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
-                      1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
+                      0: FractionColumnWidth(0.26),
+                      1: FractionColumnWidth(0.07),
                       2: FractionColumnWidth(0.07),
-                      3: FractionColumnWidth(0.3),
+                      3: FractionColumnWidth(0.6),
                     },
                     children: [
                       TableRow(
                         children: [
                           SizedBox(
                             width: 500,
-                            /*child: TextField(
-                              decoration: const InputDecoration(
-                                fillColor: Colors.transparent,
-                              ),
-                            ),*/
+                            // Puedes dejar esto vacío o poner algo si quieres
                           ),
                           Container(
-                            //padding: EdgeInsets.all(8),
                             decoration: BoxDecoration(
-                              border: Border.all(color: Colors.black)
+                              color: Colors.white, // Fondo blanco para las celdas individuales
+                              border: Border.all(color: Colors.black),
                             ),
                             child: Text(
                               'SI',
@@ -210,78 +220,89 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
                           Container(
-                            //padding: EdgeInsets.all(8),
                             decoration: BoxDecoration(
-                              border: Border.all(color: Colors.black)
+                              color: Colors.white,
+                              border: Border.all(color: Colors.black),
                             ),
                             child: Text(
                               'NO',
                               style: TextStyle(fontWeight: FontWeight.bold),
-                              softWrap: true, // Permite que el texto se envuelva automáticamente
+                              softWrap: true,
                             ),
                           ),
-                            Container(
-                            //padding: EdgeInsets.all(8),
+                          Container(
                             decoration: BoxDecoration(
-                              border: Border.all(color: Colors.black)
+                              color: Colors.white,
+                              border: Border.all(color: Colors.black),
                             ),
                             child: Text(
                               'OBSERVACIONES',
                               style: TextStyle(fontWeight: FontWeight.bold),
-                              softWrap: true, // Permite que el texto se envuelva automáticamente
+                              softWrap: true,
                             ),
                           ),
                         ],
-                      ), 
+                      ),
                     ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+
+
+            Row(
+              children: [
+                Flexible(
+                  child: Container(
+                    color: Colors.grey[300], // Fondo gris
+                    padding: EdgeInsets.all(8), // Opcional: un poco de espacio interno
+                    child: Table(
+                      columnWidths: {
+                        0: FractionColumnWidth(1),
+                      },
+                      children: [
+                        TableRow(
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(8),
+                              child: Text(
+                                'RECEPCIÓN',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
             ),
 
-
             Row(
               children: [
-                Flexible(child: Table(
-                  columnWidths:{
-                    0: FractionColumnWidth(0.3)
-                    },
-                    children: [
-                      TableRow(
-                        children: [
-                          Container(
-                            child: Text(
-                              'RECEPCIÓN',
-                              style: TextStyle(fontWeight: FontWeight.bold)
+                Flexible(
+                  child: Container(
+                    color: Colors.grey[300], // Fondo gris
+                    padding: EdgeInsets.all(8), // Opcional: agregar algo de padding
+                    child: Table(
+                      border: TableBorder.all(), // Establece el borde de la tabla
+                      columnWidths: {
+                        0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                        1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
+                        2: FractionColumnWidth(0.07),
+                        3: FractionColumnWidth(0.6),
+                      },
+                      children: [
+                        TableRow(
+                          children: [
+                            Container(
+                              child: Text(
+                                'Vienen la carpintería según albarán',
+                              ),
                             ),
-                          )
-                        ]
-                      )
-                    ],
-                  )
-                ),
-                 
-              ],
-            ),
-             Row(
-              children: [
-                Flexible(child: Table(
-                    border: TableBorder.all(), // Establece el borde de la tabla
-                    columnWidths: {
-                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
-                      1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
-                      2: FractionColumnWidth(0.07),
-                      3: FractionColumnWidth(0.3),
-                    },
-                    children: [
-                      TableRow(
-                        children: [
-                          Container(
-                             //padding: EdgeInsets.all(8),
-                            child: Text(
-                              'Vienen la carpintería según albarán',
-                            ),
-                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -309,45 +330,57 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                               ),
                             ),
-                        ],
-                      ), 
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                )
+                ),
+              ],
+            ),
 
-              ]
-             ),
             Row(
               children: [
-                 Text(
-                  'REPARTO',
-                  style: TextStyle(fontWeight: FontWeight.bold)
+                Container(
+                  color: Colors.grey[300], // Fondo gris
+                  width: 1534,
+                  padding: EdgeInsets.all(8), // Espaciado opcional
+                  child: Text(
+                    'REPARTO',
+                    style: TextStyle(fontWeight: FontWeight.bold,),
                   ),
+                ),
               ],
             ),
+
             Row(
               children: [
-                Flexible(child: Table(
-                    border: TableBorder.all(), // Establece el borde de la tabla
-                    columnWidths: {
-                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
-                      1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
-                      2: FractionColumnWidth(0.07),
-                      3: FractionColumnWidth(0.3),
-                    },
-                    children: [
-                      TableRow(
-                        children: [
-                          Container(
-                             //padding: EdgeInsets.all(8),
-                            child: Text(
-                              'Correcta según cuadrante de Medición',
+                Flexible(
+                  child: Container(
+                    color: Colors.grey[300], // Fondo gris
+                    padding: EdgeInsets.all(8), // Opcional: agregar algo de padding
+                    child: Table(
+                      border: TableBorder.all(), // Establece el borde de la tabla
+                      columnWidths: {
+                        0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                        1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
+                        2: FractionColumnWidth(0.07),
+                        3: FractionColumnWidth(0.6),
+                      },
+                      children: [
+                        TableRow(
+                          children: [
+                            Container(
+                              color: Colors.grey[300], // Fondo gris
+                              padding: EdgeInsets.all(8), // Espaciado opcional
+                              child: Text(
+                                'Correcta según cuadrante de Medición',
+                              ),
                             ),
-                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController5,
+                                controller: _dateController2,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
@@ -356,7 +389,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController6,
+                                controller: _dateController3,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
@@ -365,27 +398,21 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController7,
+                                controller: _dateController4,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
                               ),
                             ),
-                        ],
-                      ), 
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                )
-              ]
-             ),
-            Row(
-              children: [
-                 Text(
-                  'MONTAJE',
-                  style: TextStyle(fontWeight: FontWeight.bold)
-                  ),
+                ),
               ],
             ),
+
              Row(
               children: [
                 Flexible(child: Table(
