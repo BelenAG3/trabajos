@@ -99,8 +99,50 @@ class _MyHomePageState extends State<MyHomePage> {
         
         child: Column(
           children: <Widget>[
-
-            Image.asset('logo50.png'),
+           Row(
+            children: [
+              Flexible(
+              child: Table(
+                columnWidths: {
+                  0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                  1: FractionColumnWidth(0.25), // Ancho relativo de la segunda columna
+                  2: FractionColumnWidth(0.25), // Ancho relativo de la segunda columna
+                },
+                children: [
+                  TableRow(
+                    children: [
+                      Container(
+                            //padding: EdgeInsets.all(8),
+                            
+                            child: Image.asset('logo50.png', width: 200, height: 200,),
+                            ),
+                            Container(
+                            child: Text(
+                              'GUILLÉN',
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 90),
+                              softWrap: true, // Permite que el texto se envuelva automáticamente
+                            ),
+                          ),
+                          Container(
+                            child: Text(
+                              'INDUSTRIAS DE LA MADERA S.L.',
+                              style: TextStyle( fontSize: 40),
+                              softWrap: true, // Permite que el texto se envuelva automáticamente
+                            ),
+                          ),
+                    ]
+                  )
+                ],
+                  
+              )
+              
+             
+               
+            ),
+            ],
+           ),
+            
+            
 
             Row(
               children: [
