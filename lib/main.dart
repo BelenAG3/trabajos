@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_email_sender/flutter_email_sender.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -1087,28 +1089,35 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),*/ // This trailing comma makes auto-formatting nicer for build methods.
-      floatingActionButton: Container(
-        width: 200, // Esto hace que el botón ocupe todo el ancho disponible
-        height: 60,  // Ajusta la altura que desees
-        margin: EdgeInsets.all(10), // Añadir márgenes si es necesario
+      floatingActionButton: SizedBox(
+        width: 200,
+        height: 60,
         child: ElevatedButton(
-          onPressed: () {
-            // Acción
+          onPressed: () async {
+            final Email email = Email(
+              body: 'Aquí va el contenido de tu correo',
+              subject: 'Asunto del correo',
+              recipients: ['checklistmontaje@guillen_carpinteria.com'], // Destinatario
+              isHTML: false, // Si el cuerpo es HTML, ponlo como true
+            );
+
+            await FlutterEmailSender.send(email); // Enviar correo
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.blue,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10), // Bordes redondeados
-            ),
+              borderRadius: BorderRadius.circular(10)
+            )
           ),
           child: const Text(
             'Enviar',
-            style: TextStyle(fontSize: 20, color: Colors.white,),
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.white,
+            ),
           ),
         ),
       ),
-
-
     );
   }
 }
