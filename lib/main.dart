@@ -1084,15 +1084,28 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),*/ // This trailing comma makes auto-formatting nicer for build methods.
-      floatingActionButton: FloatingActionButton(
-         onPressed: () {
-           //acción
-         },
-         child: const Text(
-           'Enviar',
-           style: TextStyle(fontSize: 20),
-         ),
-       ),
+      floatingActionButton: Container(
+        width: 200, // Esto hace que el botón ocupe todo el ancho disponible
+        height: 60,  // Ajusta la altura que desees
+        margin: EdgeInsets.all(10), // Añadir márgenes si es necesario
+        child: ElevatedButton(
+          onPressed: () {
+            // Acción
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.blue,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10), // Bordes redondeados
+            ),
+          ),
+          child: const Text(
+            'Enviar',
+            style: TextStyle(fontSize: 20, color: Colors.white,),
+          ),
+        ),
+      ),
+
+
     );
   }
 }
