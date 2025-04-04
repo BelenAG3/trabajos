@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         
-        colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF800000)),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ), 
       home: const MyHomePage(title: 'CHECK-LIST TRABAJOS DE MONTAJE'),
@@ -1084,6 +1084,15 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),*/ // This trailing comma makes auto-formatting nicer for build methods.
+      floatingActionButton: FloatingActionButton(
+         onPressed: () {
+           //acción
+         },
+         child: const Text(
+           'Enviar',
+           style: TextStyle(fontSize: 20),
+         ),
+       ),
     );
   }
 }
